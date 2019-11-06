@@ -5,10 +5,10 @@ Created on Tue Apr 10 10:57:16 2018
 @author: tghosh
 """
 
-from tensorflow.keras.layers import Input, Dense, Embedding, Conv1D, Dropout, Concatenate, Lambda, GaussianNoise
-from tensorflow.keras.layers import Reshape, Flatten, Permute
-from tensorflow.keras.models import Model
-from tensorflow.keras import regularizers
+from keras.layers import Input, Dense, Embedding, Conv1D, Dropout, Concatenate, Lambda, GaussianNoise
+from keras.layers import Reshape, Flatten, Permute
+from keras.models import Model
+from keras import regularizers
 from model.custom_layer import KMaxPooling
 import json
 
@@ -72,7 +72,8 @@ class DocumentModel:
                         final_layer_kernel_regularizer = 0.0, 
                         num_units_final_layer = 1,
                         learn_word_conv=True,
-                        learn_sent_conv=True):
+                        learn_sent_conv=True,
+                        weights_file=None):
         
         
         self.vocab_size = vocab_size 
@@ -106,7 +107,7 @@ class DocumentModel:
             print("Vocab Size = {}  and the index of vocabulary words passed has {} words".format(vocab_size,len(word_index)))
             
         self._build_model()
-        self.weights_file = None
+        self.weights_file = weights_file
         
     def _build_model(self):
         max_seq_length = self.sentence_len*self.num_sentences
@@ -217,7 +218,7 @@ class DocumentModel:
         with open(file_name, "r", encoding= "utf-8") as hp_file:
             model_params = json.load(hp_file)
             doc_model = DocumentModel( **model_params)   
-            print(model_params)
+#             print(model_params)
         return doc_model   
     
     def load_model_weights(self, model_weights_filename):

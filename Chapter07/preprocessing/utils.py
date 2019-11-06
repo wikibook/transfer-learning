@@ -5,7 +5,7 @@ Created on Mon Apr  9 11:07:15 2018
 @author: tghosh
 """
 from bs4 import BeautifulSoup
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras.preprocessing.sequence import pad_sequences
 from nltk.tokenize import sent_tokenize, wordpunct_tokenize
 import re
 import sys

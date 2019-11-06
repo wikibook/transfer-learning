@@ -23,4 +23,4 @@ AMAZON_TEST_DATA = TEXT_DATA_DIR+'amazonreviews/test.ft'
 GLOVE_DIR = TEXT_DATA_DIR+ 'glove.6B'
 WORD2VEC_DIR = TEXT_DATA_DIR+ 'word2vec'
 
-MODEL_DIR = './'
+MODEL_DIR = './checkpoint'

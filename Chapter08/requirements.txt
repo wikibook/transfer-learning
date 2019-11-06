@@ -1,0 +1,7 @@
+notebook
+librosa
+matplotlib
+pandas
+keras
+tensorflow
+pillow

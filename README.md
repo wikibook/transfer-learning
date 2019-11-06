@@ -1,4 +1,13 @@
 # Hands-On Transfer Learning with Python
+# 파이썬을 활용한 딥러닝 전이학습
+
+
+책 안내
+https://wikibook.co.kr/tag/%EC%A0%84%EC%9D%B4%ED%95%99%EC%8A%B5/
+
+책 관련 발표 동영상
+
+https://www.youtube.com/playlist?list=PLqkITFr6P-oQlgZS4-XNRcYW2FBUPrc0h
 
 The code will look like the following:
 ```
@@ -9,13 +18,11 @@ import shutil
 from utils import log_progress
 np.random.seed(42)
 ```
-데이터 저장소
-https://drive.google.com/open?id=15fmF_etMqGprv87m-lF1VZKFlmev4rh8
 
-## Software and Hardware List
 
-Anaconda를 이용하여 라이브러리들을 설치하고, 코드들의 검증작업을 진행하였습니다. 아래 언급하였듯이 keras및 tensorflow등을 현재의 최신 버전(tensorflow 버전 1.13)에 맞도록 수정하였습니다. 
-(단, 7장의 경우 keras가 필요할 수 있습니다.)
+## 소프트웨어와 하드웨어 리스트
+
+Anaconda를 이용하여 라이브러리들을 설치하고, 코드들의 검증 작업을 진행하였습니다. 
 
 * Python 3.6 or 3.7.1, 
 * TensorFlow 1.10 or 1.13, 
@@ -25,11 +32,11 @@ Anaconda를 이용하여 라이브러리들을 설치하고, 코드들의 검증
               
 ### 필요 Python 패키지
 
-pip install xlrd seaborn matplotlib numpy scipy sklearn jupyter pydot 
+pip install xlrd seaborn matplotlib numpy scipy sklearn jupyter pydot gensim bs4
 
 ### 원본 Source Repository와의 차이점
 
-1. 최근 버전의 tensorflow와 keras를 사용하기로 하였습니다. 그에 따라서 ipynb의 파일들이 책 또는 원본 Repository와 다를 수 있습니다.
+1. 업데이트 된 버전의 tensorflow와 keras를 사용하기로 하였습니다. 그에 따라서 ipynb의 파일들이 책 또는 원본 Repository와 다를 수 있습니다.
 2. Keras 사용 부분의 경우 tensorflow의 keras 패키지(tf.keras)를 사용하도록 변경하였습니다. 
 3. ipynb에서 사용한 '%matplotlib inline'의 위치를 ipynb에 처음에 나오도록 바꾸었습니다.
 
@@ -51,9 +58,9 @@ Graphical Installer의 설치 방법은 쉽기 때문에 여기서 넘어가기�
 $ bash <Download 파일 이름>
 ```
 
-(현재 최신 Anaconda버젼의 파일이름은 "Anaconda3-2019.03-Linux-x86_64.sh"입니다.)
+(현재 최신 Anaconda 버젼의 파일이름은 "Anaconda3-2019.03-Linux-x86_64.sh"입니다.)
 
-3. 라이센스 및 설치 위치등을 물어보는 것들이 나오는데, 기본값으로하여 설치합니다.
+3. 라이센스 및 설치 위치등을 물어보는 것들이 나오는데, 기본값으로 설치합니다.
 
 ### 설치 확인
 
@@ -191,5 +198,5 @@ AMAZON_TEST_DATA = TEXT_DATA_DIR+'amazon_review/test.ft'
 GLOVE_DIR = TEXT_DATA_DIR+ 'glove'
 WORD2VEC_DIR = TEXT_DATA_DIR+ 'word2vec'
 
-MODEL_DIR = './'
+MODEL_DIR = './checkpoint'
 ```

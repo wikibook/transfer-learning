@@ -10,7 +10,7 @@ from dataloader.loader import Loader
 from preprocessing.utils import Preprocess, remove_empty_docs
 from dataloader.embeddings import GloVe
 from model.cnn_document_model import DocumentModel, TrainingParameters
-from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from keras.callbacks import ModelCheckpoint, EarlyStopping
 import numpy as np
 
 

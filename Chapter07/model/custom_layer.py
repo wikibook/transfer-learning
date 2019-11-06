@@ -6,7 +6,7 @@ Created on Tue Apr 10 10:57:45 2018
 """
 
 import tensorflow as tf
-from tensorflow.keras.layers import Layer, InputSpec
+from keras.layers import Layer, InputSpec
 
 class KMaxPooling(Layer):
     """

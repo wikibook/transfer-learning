@@ -10,7 +10,7 @@ from preprocessing.utils import Preprocess, remove_empty_docs
 from dataloader.loader import Loader
 from dataloader.embeddings import Word2Vec
 from model.cnn_document_model import DocumentModel, TrainingParameters
-from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from keras.callbacks import ModelCheckpoint, EarlyStopping
 import numpy as np
 import pandas as pd
 
@@ -92,7 +92,7 @@ imdb_model = DocumentModel(vocab_size=preprocessor.get_vocab_size(),
 
 imdb_model._save_model(train_params.model_hyper_parameters)
 
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 adam = Adam(lr=0.002)
               
 imdb_model.get_classification_model()\
